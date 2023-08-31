@@ -10,40 +10,42 @@
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
 </head>
 
-<body>
+<body>￼
     <div class="text-center mt-3">
         <img src="/static/assets/logo.jpeg" alt="Rain Buddy Logo">
     </div>
     <div class="text-center mt-1">
-        <h1 text-color= "white" class="text-primary">Rain Buddy</h1>
+        <h1 text-color="white" class="text-primary">Rain Buddy</h1>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card border-primary p-4 mb-3">
-                <form>
-                    <div class="mb-3">
-                        <label for="country" class="form-label">Select a country:</label>
-                        <select id="country" name="country" class="form-select">
-                            <option value="usa">United States</option>
-                            <option value="canada">Canada</option>
-                            <option value="uk">United Kingdom</option>
-                            <option value="ghana">Ghana</option>
-                            <option value="nigeria">Nigeria</option>
-                           
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="weather" class="form-label">Select weather:</label>
-                        <select id="weather" name="weather" class="form-select">
-                            <option value="rain">Rain</option>
-                            <option value="humidity">Humidity</option>
-                            
-                        </select>
-                    </div >
-                    <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>   
-                </form>
+    <div id="gut">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div id="gut" class="card border-primary p-4 mb-3">
+                    <form action="/results" method="post">
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Select a country:</label>
+                            <select id="country" name="country" class="form-select">
+                                <option value="usa">United States</option>
+                                <option value="canada">Canada</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="ghana">Ghana</option>
+                                <option value="nigeria">Nigeria</option>
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="weather" class="form-label">Select weather:</label>
+                            <select id="weather" name="weather" class="form-select">
+                                <option value="rain">Rain</option>
+                                <option value="humidity">Humidity</option>
+
+                            </select>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
