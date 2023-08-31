@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-import requests
 
 
 app = Flask(__name__)
@@ -7,29 +6,19 @@ app = Flask(__name__)
 
 
 
-api_key="ee2798328aa7160fd1a37d3ad3a29b1a"
-url =f'http://api.openweathermap.org/data/2.5/weather?q=Koforidua&appid={api_key}'
-
-get_requests=requests.get(url)
-
 
 
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if requests.method == 'POST':
-        country = requests.form['country']
-        weather = requests.form['weather']
-        return render_template('results.html', country=country, weather=weather)
+    
     return render_template("index.html")
 
 @app.route('/results', methods=['GET', 'POST'])
 def results():
-    if requests.method == 'POST':
-        country = requests.form['country']
-        weather = requests.form['weather']
-        return render_template("results.html", country=country, weather=weather)
-    return "Invalid request"
+     
+         
+    return render_template("Invalid request")
 
 @app.errorhandler(404)
 def page_not_found(e):
